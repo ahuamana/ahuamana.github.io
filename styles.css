@@ -165,3 +165,132 @@ footer {
 .fade-in {
     animation: fadeIn 1s ease-in;
 }
+
+/* Skills CSS */
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover::before {
+    opacity: 1;
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.2);
+}
+
+.skill-item span {
+    display: block;
+    font-weight: bold;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover span {
+    color: var(--primary-color);
+}
+
+.skill-level {
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin-top: 0.75rem;
+    overflow: hidden;
+}
+
+.skill-level-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transform-origin: left;
+    transition: transform 1s ease-out;
+}
+
+.skill-item:hover .skill-level-fill {
+    animation: fillAnimation 1s ease-out forwards;
+}
+
+@keyframes fillAnimation {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-grid .skill-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.skills-grid .skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skills-grid .skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skills-grid .skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skills-grid .skill-item:nth-child(4) { animation-delay: 0.4s; }
+.skills-grid .skill-item:nth-child(5) { animation-delay: 0.5s; }
+.skills-grid .skill-item:nth-child(6) { animation-delay: 0.6s; }
+.skills-grid .skill-item:nth-child(7) { animation-delay: 0.7s; }
+.skills-grid .skill-item:nth-child(8) { animation-delay: 0.8s; }
