@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
+    --primary-color: #3DDC84; /* Android green */
+    --secondary-color: #073042;
     --text-color: #333;
     --background-color: #f4f4f4;
 }
@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -70,7 +70,7 @@ main {
 
 .project {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -92,24 +92,61 @@ main {
 
 .project h3 {
     margin-bottom: 0.5rem;
+    color: var(--secondary-color);
 }
 
 .project p {
     margin-bottom: 1rem;
 }
 
-.project a {
+.btn {
     display: inline-block;
     background-color: var(--primary-color);
     color: white;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-right: 0.5rem;
 }
 
-.project a:hover {
+.btn:hover {
     background-color: var(--secondary-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.contact-links {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.contact-links li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-links i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
 }
 
 footer {
