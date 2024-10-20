@@ -3,134 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antony Nicolas Huaman Alikhan - Portfolio</title>
+    <title>Antony Huaman - Mobile Developer & Entrepreneur</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="header.css">
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
-    <header class="fade-in">
-        <h1>Antony Huaman</h1>
-        <p>Android Developer & Designer U</p>
-    </header>
+    <button id="toggle-dark-mode" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header class="hero">
+        <div class="container hero-content">
+          <div class="profile-image">
+            <img src="/api/placeholder/300/300/profile_antony.jpeg" alt="Antony Huaman" class="profile-pic">
+          </div>
+          <div class="hero-text">
+            <h1>Antony Huaman</h1>
+            <div class="info-container">
+              <div class="titles">
+                <span class="title">Mobile Developer</span>
+                <span class="title-separator">&</span>
+                <span class="title">Entrepreneur</span>
+              </div>
+              <div class="accolade">
+                <span class="accolade-icon">🏆</span>
+                <div class="accolade-text">
+                  <span class="accolade-title">NASA Space Apps Winner</span>
+                  <span class="accolade-detail">Local Junin 2024</span>
+                </div>
+              </div>
+            </div>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </header>
 
     <nav>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <section id="projects">
-            <h2>My Android Projects</h2>
-            <div class="projects">
-                <div class="project fade-in">
-                    <img src="/api/placeholder/400/200" alt="Android App 1">
-                    <div class="project-info">
-                        <h3>Fitness Tracker App</h3>
-                        <p>A Kotlin-based Android app for tracking workouts and health metrics, integrated with Firebase for real-time data sync.</p>
-                        <a href="#" class="btn">View on Google Play</a>
-                        <a href="#" class="btn">GitHub Repo</a>
-                    </div>
+        <section id="projects" class="section fade-in">
+            <div class="container">
+                <h2>My Android Projects</h2>
+                <div class="projects">
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="/api/placeholder/400/200" alt="Fitness Tracker App Screenshot" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>Fitness Tracker App</h3>
+                            <p>A Kotlin-based Android app for tracking workouts and health metrics, integrated with Firebase for real-time data sync.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">MVVM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fab fa-google-play"></i> View on Google Play
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="/api/placeholder/400/200" alt="E-commerce Mobile App Screenshot" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Mobile App</h3>
+                            <p>An Android e-commerce app built with Kotlin and Jetpack Compose, featuring offline caching and push notifications.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Jetpack Compose</span>
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Room DB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fab fa-google-play"></i> View on Google Play
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image">
+                            <img src="/api/placeholder/400/200" alt="Social Media Client Screenshot" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media Client</h3>
+                            <p>A feature-rich social media client for Android, utilizing MVVM architecture and integrating various APIs.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">MVVM</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fab fa-google-play"></i> View on Google Play
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="project fade-in">
-                    <img src="/api/placeholder/400/200" alt="Android App 2">
-                    <div class="project-info">
-                        <h3>E-commerce Mobile App</h3>
-                        <p>An Android e-commerce app built with Kotlin and Jetpack Compose, featuring offline caching and push notifications.</p>
-                        <a href="#" class="btn">View on Google Play</a>
-                        <a href="#" class="btn">GitHub Repo</a>
+            </div>
+        </section>
+
+        <section id="skills" class="section fade-in">
+            <div class="container">
+                <h2>Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-android"></i>
+                        <h3>Android SDK</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.95);"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="project fade-in">
-                    <img src="/api/placeholder/400/200" alt="Android App 3">
-                    <div class="project-info">
-                        <h3>Social Media Client</h3>
-                        <p>A feature-rich social media client for Android, utilizing MVVM architecture and integrating various APIs.</p>
-                        <a href="#" class="btn">View on Google Play</a>
-                        <a href="#" class="btn">GitHub Repo</a>
+
+                    <div class="skill-item">
+                        <i class="fab fa-kotlin"></i>
+                        <h3>Kotlin</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.90);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.85);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h3>Firebase</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.80);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h3>SQLite</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.75);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX Design</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.70);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.85);"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <h3>RESTful APIs</h3>
+                        <div class="skill-level">
+                            <div class="skill-level-fill" style="transform: scaleX(0.80);"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="fade-in">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="fab fa-android"></i>
-                <span>Android SDK</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.95);"></div>
+        <section id="about" class="section fade-in">
+            <div class="about-container">
+                <div class="about-header">
+                    <h2>About Me</h2>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <i class="fas fa-code experience-icon"></i>
+                            <span class="experience-years">4+ Years of Mobile Development Experience</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a Mobile developer specializing in Kotlin and Swift development, with a proven track record in the Education and Banking sectors. Currently, I'm creating mobile solutions that serve over 100 million users in the banking industry.</p>
+                        
+                        <div class="tech-list">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">iOS</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+        
+                        <p>As a seasoned professional, I bring extensive experience in leading cross-functional teams and implementing scalable solutions for a global audience. My expertise in continuous delivery practices (CI/CD) has been crucial in delivering high-quality mobile applications.</p>
+                    </div>
+        
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-mobile-alt highlight-icon"></i>
+                            <div class="highlight-content">
+                                <h4>Mobile Expertise</h4>
+                                <p>Specialized in creating robust mobile applications using modern architectures and best practices.</p>
+                            </div>
+                        </div>
+        
+                        <div class="highlight-item">
+                            <i class="fas fa-code-branch highlight-icon"></i>
+                            <div class="highlight-content">
+                                <h4>Technical Stack</h4>
+                                <p>Advanced proficiency in:</p>
+                                <div class="tech-list">
+                                    <span class="tech-tag">Flow</span>
+                                    <span class="tech-tag">Hilt</span>
+                                    <span class="tech-tag">Dagger</span>
+                                    <span class="tech-tag">Room</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="highlight-item">
+                            <i class="fas fa-tools highlight-icon"></i>
+                            <div class="highlight-content">
+                                <h4>Development Tools</h4>
+                                <p>Experienced with:</p>
+                                <div class="tech-list">
+                                    <span class="tech-tag">Git</span>
+                                    <span class="tech-tag">Postman</span>
+                                    <span class="tech-tag">Swagger</span>
+                                    <span class="tech-tag">Junit</span>
+                                    <span class="tech-tag">Mockito</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="skill-item">
-                <i class="fab fa-kotlin"></i>
-                <span>Kotlin</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.9);"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <span>Java</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.85);"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-fire"></i>
-                <span>Firebase</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.8);"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <span>SQLite</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.75);"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-paint-brush"></i>
-                <span>UI/UX Design</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.7);"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-code-branch"></i>
-                <span>Git</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.85);"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-cogs"></i>
-                <span>RESTful APIs</span>
-                <div class="skill-level">
-                    <div class="skill-level-fill" style="transform: scaleX(0.8);"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <section id="about" class="fade-in">
-            <h2>About Me</h2>
-            <p>Write a brief description about yourself, your skills, and your experience here.</p>
         </section>
 
-        <section id="contact" class="fade-in">
-            <h2>Contact Me</h2>
-            <p>You can reach me at: your.email@example.com</p>
+        <section id="contact" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item" data-aos="fade-up">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:nicolasalikhan@gmail.com">nicolasalikhan@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="contact-icon-wrapper">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/ahuamana" target="_blank">GitHub Profile</a>
+                            </div>
+                        </div>
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-icon-wrapper">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/antony-huaman/" target="_blank">LinkedIn Profile</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="contact-icon-wrapper">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>YouTube</h3>
+                                <a href="https://www.youtube.com/@PaparazziTeamYT" target="_blank">PaparazziTeamYT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Antony Huaman. All rights reserved.</p>
+        </div>
     </footer>
 
+
+    <script src="slider.js"></script>
     <script src="script.js"></script>
+    <script src="contact.js"></script>
+    <script src="toggle-dark-mode.js"></script>
+    
+
+
 </body>
 </html>

@@ -1,0 +1,224 @@
+
+/* Enhanced About Section Styles */
+#about {
+    position: relative;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.about-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding);
+    position: relative;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-highlights {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.highlight-item:hover {
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.highlight-item:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    padding: 0.5rem;
+    background: rgba(66, 153, 225, 0.1);
+    border-radius: 50%;
+}
+
+.highlight-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.tech-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(66, 153, 225, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.tech-tag:hover {
+    background: rgba(66, 153, 225, 0.2);
+    transform: translateY(-2px);
+}
+
+.experience-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.experience-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.experience-years {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Dark mode specific styles */
+body.dark-mode #about::before {
+    background: linear-gradient(90deg, transparent, var(--dark-primary-color), transparent);
+}
+
+body.dark-mode .about-header h2 {
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .about-header h2::after {
+    background: var(--dark-primary-color);
+}
+
+body.dark-mode .about-highlights {
+    background: var(--dark-surface-color);
+    box-shadow: var(--dark-box-shadow);
+}
+
+body.dark-mode .highlight-item {
+    background: var(--dark-surface-color);
+}
+
+body.dark-mode .highlight-item:hover {
+    border-color: var(--dark-primary-color);
+    background: var(--dark-hover-color);
+}
+
+body.dark-mode .highlight-icon {
+    color: var(--dark-primary-color);
+    background: rgba(127, 179, 236, 0.1);
+}
+
+body.dark-mode .highlight-content h4 {
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .tech-tag {
+    background: rgba(127, 179, 236, 0.1);
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .tech-tag:hover {
+    background: rgba(127, 179, 236, 0.2);
+}
+
+body.dark-mode .experience-card {
+    background: var(--dark-surface-color);
+    box-shadow: var(--dark-box-shadow);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-header h2 {
+        font-size: 2rem;
+    }
+
+    .highlight-item {
+        padding: 0.8rem;
+    }
+}
