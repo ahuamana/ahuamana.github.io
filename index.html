@@ -53,13 +53,24 @@
       </header>
 
       <nav class="main-nav">
-        <div class="container nav-container">
+        <div class="nav-container">
+            <!-- Add the hamburger button -->
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Add the nav links -->
             <ul class="nav-list">
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects<span class="nav-indicator"></span></a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills<span class="nav-indicator"></span></a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About<span class="nav-indicator"></span></a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact<span class="nav-indicator"></span></a></li>
             </ul>
+
+            <!-- Add the overlay div -->
+            <div class="nav-overlay"></div>
         </div>
     </nav>
 
@@ -324,13 +335,10 @@
         </div>
     </footer>
 
-
-    <script src="slider.js"></script>
     <script src="script.js"></script>
     <script src="contact.js"></script>
     <script src="toggle-dark-mode.js"></script>
-    
-
+    <script src="navigation.js"></script>
 
 </body>
 </html>

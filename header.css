@@ -24,6 +24,9 @@
     --dark-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     --dark-border-color: #2f3a4f;
     --dark-muted-text: #a0aec0;
+
+    --mobile-padding: 16px;
+    --mobile-hero-padding: 4rem 0 3rem;
 }
 
 /* ... (previous CSS rules remain unchanged) ... */
@@ -286,24 +289,52 @@ body.dark-mode nav a::after {
 }
 
 /* Responsive design */
+/* Enhanced responsive styles */
+@media (max-width: 1200px) {
+    .hero-content {
+        padding: 0 var(--mobile-padding);
+    }
+}
+
 @media (max-width: 1024px) {
+    .hero {
+        padding: var(--mobile-hero-padding);
+    }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
 
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-width: 4px;
+    }
+
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .info-container {
         align-items: center;
     }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
 
     .titles {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.75rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .title-separator {
@@ -313,28 +344,86 @@ body.dark-mode nav a::after {
     .accolade {
         flex-direction: column;
         text-align: center;
+        padding: 0.75rem;
     }
 
-    .cta-buttons {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .titles {
-        font-size: 1.5rem;
+    .accolade-icon {
+        font-size: 2rem;
     }
 
     .accolade-title {
         font-size: 1.2rem;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0 2rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-width: 3px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .titles {
+        font-size: 1.2rem;
+    }
+
+    .accolade-title {
+        font-size: 1.1rem;
+    }
+
+    .accolade-detail {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust animation for smaller screens */
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.3; }
+        50% { transform: scale(1.03); opacity: 0.15; }
+        100% { transform: scale(1); opacity: 0.3; }
+    }
+}
+
+/* Add landscape orientation support */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .titles {
+        flex-direction: row;
+        gap: 0.5rem;
     }
 }
