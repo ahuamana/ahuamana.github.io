@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antony Huaman - Mobile Developer & Entrepreneur</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="navigation.css">
-    <link rel="stylesheet" href="project-card.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/project-card.css">
+    <link rel="stylesheet" href="/css/timeline.css">
     <!-- Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
@@ -75,6 +76,155 @@
     </nav>
 
     <main>
+        <!-- Work Experience Timeline Section -->
+        <section id="experience" class="section fade-in">
+            <div class="container">
+                <h2 class="section-title">Professional Journey</h2>
+                <div class="experience-summary">
+                    <div class="summary-card">
+                        <div class="summary-icon">🚀</div>
+                        <h3>4+ Years</h3>
+                        <p>Mobile Development</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">👥</div>
+                        <h3>100M+</h3>
+                        <p>Users Impacted</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">📱</div>
+                        <h3>20+</h3>
+                        <p>Apps Delivered</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <span class="date">2023 - Present</span>
+                            <span class="duration">(1 year 2 months)</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="role-header">
+                                <h3>Senior Mobile Developer</h3>
+                                <div class="company-badge">Banking Industry</div>
+                            </div>
+                            <div class="key-achievements">
+                                <h4>Key Achievements</h4>
+                                <ul>
+                                    <li>Led development of high-performance banking app serving 100M+ users</li>
+                                    <li>Reduced app crash rate by 75% through robust error handling</li>
+                                    <li>Improved app store rating from 3.8 to 4.6 stars</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="tech-list">
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Swift</span>
+                                    <span class="tech-tag">MVVM</span>
+                                    <span class="tech-tag">Clean Architecture</span>
+                                    <span class="tech-tag">CI/CD</span>
+                                    <span class="tech-tag">Unit Testing</span>
+                                </div>
+                            </div>
+                            <div class="metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">Code Coverage</span>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" style="width: 85%">85%</div>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">App Performance</span>
+                                    <div class="metric-bar">
+                                        <div class="metric-fill" style="width: 92%">92%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <span class="date">2021 - 2023</span>
+                            <span class="duration">(2 years)</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="role-header">
+                                <h3>Mobile Developer</h3>
+                                <div class="company-badge">Education Sector</div>
+                            </div>
+                            <div class="key-achievements">
+                                <h4>Key Achievements</h4>
+                                <ul>
+                                    <li>Developed e-learning platform used by 50,000+ students</li>
+                                    <li>Implemented offline-first architecture increasing user engagement by 40%</li>
+                                    <li>Reduced app size by 30% through optimization</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="tech-list">
+                                    <span class="tech-tag">Android</span>
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Room DB</span>
+                                    <span class="tech-tag">Jetpack Compose</span>
+                                </div>
+                            </div>
+                            <div class="certifications">
+                                <h4>Certifications Earned</h4>
+                                <div class="cert-list">
+                                    <span class="cert-badge">Google Associate Android Developer</span>
+                                    <span class="cert-badge">Firebase Certified Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">
+                            <span class="date">2020 - 2021</span>
+                            <span class="duration">(1 year)</span>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="role-header">
+                                <h3>Junior Android Developer</h3>
+                                <div class="company-badge">Freelance</div>
+                            </div>
+                            <div class="key-achievements">
+                                <h4>Key Achievements</h4>
+                                <ul>
+                                    <li>Delivered 10+ custom Android applications for various clients</li>
+                                    <li>Maintained 100% client satisfaction rate</li>
+                                    <li>Integrated analytics increasing user engagement by 25%</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="tech-list">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Android</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">REST APIs</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> View Portfolio
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Projects Section -->
         <section id="projects" class="section projects-section">
             <div class="container">
                 <h2 class="section-title">Personal Projects</h2>
@@ -335,10 +485,10 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="contact.js"></script>
-    <script src="toggle-dark-mode.js"></script>
-    <script src="navigation.js"></script>
-
+    <script src="/js/script.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/toggle-dark-mode.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/timeline.js"></script>
 </body>
 </html>

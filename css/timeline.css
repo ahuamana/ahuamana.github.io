@@ -1,0 +1,365 @@
+/* Enhanced Timeline Styles for Recruiters */
+.experience-summary {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+    max-width: 800px;
+    gap: 2rem;
+}
+
+.summary-card {
+    background: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+}
+
+.summary-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.summary-card h3 {
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem 0;
+    overflow: hidden; /* Add this to contain the line */
+}   
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: calc(100% - 4rem); /* Subtract padding from height */
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    top: 2rem; /* Align with the padding */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+/* Ensure the last timeline item doesn't have extra margin */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 4px solid var(--background-color);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.timeline-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% - 45px);
+    text-align: right;
+    padding-right: 30px;
+}
+
+.timeline-date .date {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: block;
+}
+
+.timeline-date .duration {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.timeline-content {
+    margin-left: calc(50% + 45px);
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.company-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.key-achievements {
+    margin: 1.5rem 0;
+}
+
+.key-achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.key-achievements li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.key-achievements li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.tech-stack {
+    margin: 1.5rem 0;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.metrics {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.metric-item {
+    background: rgba(var(--primary-color-rgb), 0.05);
+    padding: 1.2rem; /* Increased padding */
+    border-radius: var(--border-radius);
+}
+
+.metric-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem; /* Increased margin */
+    font-weight: 500;
+    padding: 0 0.5rem; /* Added horizontal padding */
+}
+
+.metric-value {
+    color: var(--primary-color);
+    font-weight: 600;
+    position: absolute;
+    right: 1rem; /* Increased right spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: 0.9rem;
+    /* Ensure text is visible regardless of bar width */
+    text-shadow: 
+        -1px -1px 0 rgba(255, 255, 255, 0.7),
+        1px -1px 0 rgba(255, 255, 255, 0.7),
+        -1px 1px 0 rgba(255, 255, 255, 0.7),
+        1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.metric-label span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.metric-bar {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    border-radius: 10px;
+    height: 24px; /* Increased height to fit text */
+    overflow: hidden;
+    position: relative;
+    padding: 0 0.5rem; /* Added padding for inner content */
+}
+
+.metric-fill {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease;
+    position: relative;
+    padding-left: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .metrics {
+        gap: 0.8rem;
+    }
+    
+    .metric-item {
+        padding: 0.8rem;
+    }
+}
+
+/* Dark mode adjustments */
+body.dark-mode .metric-item {
+    background: rgba(var(--dark-primary-color-rgb), 0.1);
+}
+
+body.dark-mode .metric-value {
+    text-shadow: 
+        -1px -1px 0 rgba(0, 0, 0, 0.7),
+        1px -1px 0 rgba(0, 0, 0, 0.7),
+        -1px 1px 0 rgba(0, 0, 0, 0.7),
+        1px 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+.certifications {
+    margin: 1.5rem 0;
+}
+
+.cert-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.cert-badge {
+    background: rgba(var(--secondary-color-rgb), 0.1);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cert-badge::before {
+    content: '🏆';
+}
+
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .summary-card {
+    background: var(--dark-surface-color);
+}
+
+body.dark-mode .timeline-content {
+    background: var(--dark-surface-color);
+}
+
+body.dark-mode .tech-tag {
+    background: rgba(var(--dark-primary-color-rgb), 0.2);
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode .cert-badge {
+    background: rgba(var(--dark-secondary-color-rgb), 0.2);
+    color: var(--dark-secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .experience-summary {
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-dot {
+        left: 30px;
+    }
+    
+    .timeline-date {
+        left: 70px;
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        top: -30px;
+    }
+    
+    .timeline-content {
+        margin-left: 70px;
+        width: calc(100% - 90px);
+    }
+
+    .role-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
